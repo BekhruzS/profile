@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Bekhruz's Profile</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="{% static 'vendors/themify-icons/css/themify-icons.css' %}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Bootstrap + Meyawo main styles -->
+    <link rel="stylesheet" href="{% static 'css/meyawo.css' %}">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="{% url 'blog:home' %}">Bekhruz's Profile</a>
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="{% url 'blog:home' %}">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#about">About</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#testmonial">Testmonial</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>
+    </nav><!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">HI!</span>
+                <span class="down">I am Bekhruz</span>
+            </h1>
+            <p class="header-subtitle">SOFTWARE ENGINEER</p>
+        </div>
+    </header><!-- end of page header -->
+
+    {% block content %}
+    <main>
+
+    </main>
+    {% endblock %}
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">
+            <p class="mb-0">
+                <script>document.write(new Date().getFullYear())</script> &copy; <a
+                    href=""></a>Bekhruz Salimov <a></a>
+            </p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="https://x.com/elonmusk/" class="link"><i class="ti-twitter-alt"></i></a>
+                <a href="https://google.com/" class="link"><i class="ti-google"></i></a>
+                <a href="https://instagram.com/bekhruz.ku/" class="link"><i class="ti-instagram"></i></a>
+                <a href="https://github.com/BekhruzS/" class="link"><i class="ti-github"></i></a>
+                <a href="https://t.me/azimovich_usa/" class="link"><i class="bi bi-telegram"></i></a>
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+
+    <!-- core  -->
+    <script src="{% static 'vendors/jquery/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="{% static 'vendors/bootstrap/bootstrap.affix.js' %}"></script>
+
+    <!-- Meyawo js -->
+    <script src="{% static 'js/meyawo.js' %}"></script>
+
+    
+
+</body>
+
+</html>
