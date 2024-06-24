@@ -49,21 +49,16 @@ MIDDLEWARE = [
 SITE_ID = 1
 
 CORS_ORIGIN_WITELIST = [
-    "",
-    ""
-
+    "https://profile-vert-pi.vercel.app/",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    ""
-    
+    "https://profile-vert-pi.vercel.app/"
 
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "",
-    ""
-     
+     "https://profile-vert-pi.vercel.app/"
 ]
 
 
@@ -85,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'core.wsgi.application'
+WSGI_APPLICATION = 'core.wsgi.app'
 
 
 
@@ -96,16 +91,16 @@ WSGI_APPLICATION = 'core.wsgi.application'
 #     }
 # }
 
-# DATABASES = {
-#     "default": {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         "NAME": os.environ["DBNAME"],
-#         "USER": os.environ["DBUSER"],
-#         "PASSWORD": os.environ["DBPASSWORD"],
-#         "HOST": os.environ["DBHOST"],
-#         "PORT": os.environ["DBPORT"],
-#     }
-# }
+DATABASES = {
+    "default": {
+        'ENGINE': 'django.db.backends.postgresql',
+        "NAME": os.environ["DBNAME"],
+        "USER": os.environ["DBUSER"],
+        "PASSWORD": os.environ["DBPASSWORD"],
+        "HOST": os.environ["DBHOST"],
+        "PORT": os.environ["DBPORT"],
+    }
+}
 
 
 
@@ -142,9 +137,3 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
-}
